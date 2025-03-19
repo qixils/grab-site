@@ -31,7 +31,7 @@ def re_compile(regexp):
 	re.compile(regexp)
 	try:
 		return re2.compile(regexp)
-	except re.error:
+	except:
 		# Regular expressions with lookaround expressions cannot be compiled with
 		# re2, so on error try compiling with re.
 		return re.compile(regexp)
